@@ -13,7 +13,7 @@ provider "docker" {
 
 # Pulls the image
 resource "docker_image" "ubuntu" {
-  name = "ubuntu:latest"
+  name = "jenkins/jenkins:lts"
 }
 
 # Create a container
