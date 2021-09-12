@@ -1,0 +1,2 @@
+hostname webserver1
+yum install enginix

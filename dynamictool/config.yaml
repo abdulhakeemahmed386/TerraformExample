@@ -1,0 +1,10 @@
+[Unit]
+Description=Cool Python Unit
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/user/my_app.py
+KillMode=Process
+
+[Install]
+WantedBy=multi-user.target

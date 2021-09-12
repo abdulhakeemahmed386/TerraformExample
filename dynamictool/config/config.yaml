@@ -1,0 +1,31 @@
+## Central yaml config file
+## This poles in all of of the various config elements to create a unified dat dictionary used with in this tool
+default_path: '/etc/dynamic/configuration/'
+envar_list:
+        - 'env_name'
+        - 'enviroment'
+timestamp_format: '%Y, %m, %d, %H, %M, %S, %Z'
+teme_stamp_file: 'dyconf_last-modified'
+# The various generic config files, required to make most of the libs work correctly
+#
+Schedule-config:
+        schedule: True
+        run_every: 1 #minute
+        sleep_time: 30 #seconds
+        notify_systems: True
+
+fuse-config:
+  config_key: 'dai-config'
+  output_yaml: 'DAICodeMapping.yaml'
+  path: '/etc/bsg/dynamic/'
+  rest_endpoint: 'https://localhost:8443/camel/dynamic-yaml-configuration'
+  timeout: 40
+  configure_on_setup: True
+
+ob-proxy-config:
+  config_key: 'squad-config'
+  quid_path: '/etc/bsg/dynamic/'
+  
+
+
+

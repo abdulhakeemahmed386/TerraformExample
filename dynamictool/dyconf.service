@@ -1,0 +1,12 @@
+[Unit]
+Description=Dynamic Configurator
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/dyconf
+Type=notify
+Restart=on-failure
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
